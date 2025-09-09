@@ -258,7 +258,7 @@ function spawnClaudeProcess() {
   
   // Spawn Claude CLI process
   supervisorState.claudeProcess = spawn('claude', claudeArgs, {
-    stdio: ['pipe', 'pipe', 'pipe'],
+    stdio: ['ignore', 'pipe', 'pipe'],
     cwd: CONFIG.CLAUDE_WORKSPACE,
     env: {
       ...process.env,
